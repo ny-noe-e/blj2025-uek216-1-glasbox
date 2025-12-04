@@ -6,10 +6,10 @@
 const char *ssid = "GuestWLANPortal";
 const char *server = "mqtt://10.10.2.127:1883";
 
-const char *pub_topic = "zuerich/glasbox/<glasbox-id>";
-const char *sub_topic = "zuerich/glasbox/<glasbox-id>";
+const char *pub_topic = "zuerich/glasbox/glasbox";
+const char *sub_topic = "zuerich/glasbox/glasbox";
 
-const char *client_id = "ESP32 Glassbox";
+const char *client_id = "ESP32 Glasbox";
 
 Adafruit_AHTX0 aht;
 ESP32MQTTClient client;
