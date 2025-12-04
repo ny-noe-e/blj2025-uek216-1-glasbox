@@ -6,8 +6,8 @@
 const char *ssid = "GuestWLANPortal";
 const char *server = "mqtt://10.10.2.127:1883";
 
-const char *pub_topic = "zuerich/glassbox/<glassbox-id>";
-const char *sub_topic = "zuerich/glassbox/<glassbox-id>";
+const char *pub_topic = "zuerich/glasbox/<glasbox-id>";
+const char *sub_topic = "zuerich/glasbox/<glasbox-id>";
 
 const char *client_id = "ESP32 Glassbox";
 
