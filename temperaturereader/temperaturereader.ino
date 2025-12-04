@@ -11,6 +11,8 @@
 #define CS  2
 #define NUM_MODULES 1
 
+#define A 5
+
 const char *ssid = "GuestWLANPortal";
 const char *server = "mqtt://10.10.2.127:1883";
 
@@ -33,6 +35,7 @@ void setup() {
   client.setURI(server);
   client.setMqttClientName(client_id);
   client.loopStart();
+  pinMode(A, OUTPUT);
 }
 
 void displayString(const char* s) {
@@ -51,7 +54,13 @@ void loop() {
   displayString(s);
   float temperature = temp.temperature;
   std::string msg = std::to_string(temperature);
-  client.publish(pub_topic, "67.67");
+  client.publish(pub_topic, msg);
+  if (temperature > 28.5){
+    digitalWrite(A, HIGH);
+  }
+  else {
+    digitalWrite(A, LOW);
+  }
   delay(1000);
 }
  
