@@ -1,3 +1,4 @@
+//including all librarys
 #include <WiFi.h>
 #include <Adafruit_AHTX0.h>
 #include <ESP32MQTTClient.h>
@@ -13,6 +14,7 @@
 
 #define A 5
 
+//defining which server the data has to be sent to
 const char *ssid = "GuestWLANPortal";
 const char *server = "mqtt://10.10.2.127:1883";
 
@@ -26,6 +28,7 @@ ESP32MQTTClient client;
 
 LedControl display = LedControl(DIN, CLK, CS, 1);
  
+//setup for all of the components
 void setup() {
   Serial.begin(115200);
   display.begin(15);
@@ -47,17 +50,20 @@ void displayString(const char* s) {
   Serial.println(s);
 }
 
+//loop with all components of programm
 void loop() {
   sensors_event_t humidity, temp;
   aht.getEvent(&humidity, &temp);
 
+//creation of float and string for both data sets
   float temperature = temp.temperature;
   std::string msg = std::to_string(temperature);
   
   float hum = humidity.relative_humidity;
   std::string teststring = std::to_string(hum);
+  
+  //publishing the data to the server
   client.publish("zuerich/glasbox/RawHumidity", teststring);
-
   Serial.print(msg.c_str());
   Serial.print("      ");
   Serial.println(temperature);
