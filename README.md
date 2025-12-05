@@ -6,3 +6,11 @@ Das ganze Projekt haben wir im Rahmen von 2.5 Tagen durchgeführt.
 Um die Temperatur zu visualisieren haben wir eine sieben Segment Matrix genutzt und als warnung einen kleinen Lautsprecher welcher laut pfeift wenn es zu heiss oder zu stickig ist.
 <br>
 Auf einem Dashboard kann man sich auch die aktuellen daten ansehen und so weitere Informationen / Warnungen erhalten.
+<br>
+Um das Programm nutzen zu können, werden folgende Matterialien verwendet:
+* ESP32
+* 7 segment Matrix
+* Temperatur / Feuchtigkeits sensor
+* Lautsprecher
+* M-M Kabel
+* M-F Kabel
