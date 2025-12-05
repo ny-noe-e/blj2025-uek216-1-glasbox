@@ -1,5 +1,5 @@
 ## üK 216
-In diesem Repository hat meine Gruppe, besetehend aus Sujan, Ramon und mir (Noe) unseren code für den ESP32 hochgeladen.
+In diesem Repository hat unsere Gruppe, besetehend aus Sujan, Ramon und Noe unseren code für den ESP32 hochgeladen.
 <br>
 In unserem Projekt mussten wir mit Sensoren und Aktuatoren eine Meldung herausgeben, wen es in der Glasbox zu warm oder stickig ist.
 Das ganze Projekt haben wir im Rahmen von 2.5 Tagen durchgeführt.
